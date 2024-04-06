@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "Web": "npx playwright test --grep=@Web"
+    "Web": "npx playwright test --grep=@Web",
+    "Google": "npx playwright test --grep=@Google"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.42.1",
+    "@playwright/test": "^1.43.0",
     "@types/node": "^20.11.24"
   },
   "dependencies": {
