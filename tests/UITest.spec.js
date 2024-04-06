@@ -5,6 +5,7 @@ import exp from 'constants';
 test('@Web UI Automation', async({page})=>{
 
     await page.goto("https://www.rahulshettyacademy.com/loginpagePractise/");
+
     console.log(await page.title())
 
     await page.locator("#username").fill("rahulshettyacademy")
