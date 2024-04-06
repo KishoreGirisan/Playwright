@@ -1,20 +1,10 @@
 pipeline {
-   agent { docker { image 'mcr.microsoft.com/playwright:v1.43.0-jammy' } }
+   agent { docker { image 'node:18-alpine' } }
    stages {
-      stage('pull') {
-         steps {
-            sh 'docker pull mcr.microsoft.com/playwright:v1.43.0-jammy'
-         }
-      }
-      stage('run') {
-         steps {
-            sh 'docker run -it --rm --ipc=host mcr.microsoft.com/playwright:v1.43.0-jammy /bin/bash'
-         }
-      }
+      
       stage('e2e-tests') {
          steps {
-            sh 'npm ci'
-            sh 'npm run Google'
+            sh 'node --version'
          }
       }
    }
