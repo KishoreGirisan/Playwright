@@ -3,7 +3,7 @@ pipeline {
    { 
     dockerContainer 
         { 
-            image 'mcr.microsoft.com/playwright:v1.43.0-jammy' 
+            image 'mcr.microsoft.com/playwright:v1.43.0-focal' 
         } 
     }
    stages {
