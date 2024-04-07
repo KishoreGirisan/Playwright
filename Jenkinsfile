@@ -12,11 +12,17 @@ pipeline {
                image 'node:18-alpine'
             }
          }
+         steps 
+         {
+        // Steps run in node:7-alpine docker container on docker agent
+        sh 'node --version'
+         }
       }
 
       stage('e2e-tests') 
       {
-         steps {
+         steps 
+         {
             sh 'node --version'
          }
       }
