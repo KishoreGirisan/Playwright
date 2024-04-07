@@ -1,13 +1,21 @@
 pipeline {
-   agent { 
-      docker 
-         { 
-            image 'node:18-alpine' 
-         } 
+   agent none
+
+   stages 
+   {
+       stage('Docker node test') 
+      {
+         agent 
+         {
+            docker
+            {
+               image 'node:18-alpine'
+            }
+         }
       }
-   stages {
-      
-      stage('e2e-tests') {
+
+      stage('e2e-tests') 
+      {
          steps {
             sh 'node --version'
          }
