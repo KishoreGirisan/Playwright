@@ -1,5 +1,8 @@
 pipeline {
-   agent none
+   agent 
+   {
+      label 'docker'
+   }
 
    stages 
    {
@@ -9,13 +12,14 @@ pipeline {
          {
             docker
             {
+               label 'docker'
                image 'node:18-alpine'
             }
          }
          steps 
          {
-        // Steps run in node:7-alpine docker container on docker agent
-        sh 'node --version'
+            // Steps run in node:7-alpine docker container on docker agent
+            sh 'node --version'
          }
       }
 
