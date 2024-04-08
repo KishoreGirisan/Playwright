@@ -15,7 +15,6 @@ pipeline {
       {
          steps {
             sh 'npm cache clean --force'
-            sh 'sudo chown -R 501:20 "/.npm"'
             sh 'npm ci'
             sh 'npx playwright install --with-deps'
          }
