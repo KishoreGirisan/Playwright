@@ -14,9 +14,7 @@ pipeline {
       stage('e2e-tests') 
       {
          steps {
-            sh 'sudo chown -R 501:20 "/.npm"'
-            sh 'rm -rf node_modules package-lock.json'
-            sh 'npm cache clean --force'
+            sh 'rm -rf node_modules/'
             sh 'npm i'
             sh 'npm ci'
             sh 'npm run Google'
