@@ -14,8 +14,7 @@ pipeline {
       stage('Build') 
       {
          steps {
-            sh 'npm ci'
-            sh 'npx playwright install --with-deps'
+            sh 'docker run -it --rm --ipc=host mcr.microsoft.com/playwright:v1.43.0-jammy /bin/bash'
          }
       }
       stage('e2e-tests') 
