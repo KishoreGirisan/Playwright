@@ -15,7 +15,7 @@ pipeline {
       {
          steps {
             sh 'npm cache clean --force'
-            sh 'npm ci'
+            sh 'npm install --cache="./cache/"'
             sh 'npx playwright install --with-deps'
          }
       }
