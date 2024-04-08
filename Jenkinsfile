@@ -15,9 +15,8 @@ pipeline {
       {
          steps {
             sh 'npm cache clean --force'
-            sh 'docker run -it --rm --ipc=host mcr.microsoft.com/playwright:v1.43.0-jammy /bin/bash'
             sh 'npm install --cache="./cache/"'
-            sh 'npx playwright install --with-deps'
+            sh 'sudo npx playwright install --with-deps'
          }
       }
       stage('e2e-tests') 
