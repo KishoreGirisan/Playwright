@@ -13,7 +13,6 @@ pipeline {
       docker 
          { 
             image 'mcr.microsoft.com/playwright:v1.43.0-jammy' 
-            docker run --rm -it docker pull 'mcr.microsoft.com/playwright:v1.43.0-jammy /bin/bash'
          } 
       }
    stages {
