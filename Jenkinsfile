@@ -16,6 +16,7 @@ pipeline {
          steps {
             sh 'rm -rf node_modules package-lock.json'
             sh 'npm cache clean --force'
+            sh 'npm i'
             sh 'npm ci'
             sh 'npm run Google'
          }
