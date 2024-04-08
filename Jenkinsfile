@@ -16,7 +16,7 @@ pipeline {
          steps {
             sh 'npm cache clean --force'
             sh 'npm install --cache="./cache/"'
-            sh 'sudo npx playwright install --with-deps'
+            sh 'npx playwright install-deps --dry-run'
          }
       }
       stage('e2e-tests') 
