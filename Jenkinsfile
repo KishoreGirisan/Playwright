@@ -22,7 +22,7 @@ pipeline {
             sh 'npm cache clean --force'
             sh 'npm ci --cache="./cache/"'
             //sh 'npx playwright install-deps --dry-run'
-            sh 'npx playwright install --with-deps'
+            sh 'npx playwright install-deps --dry-run'
          }
       }
       stage('e2e-tests') 
