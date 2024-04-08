@@ -14,7 +14,7 @@ pipeline {
       stage('e2e-tests') 
       {
          steps {
-            sh 'npm ci'
+            sh 'npm install'
             sh 'npm run Google'
          }
       }
