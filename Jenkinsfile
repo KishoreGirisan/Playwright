@@ -17,13 +17,12 @@ pipeline {
             sh 'npm cache clean --force'
             sh 'npm install --cache="./cache/"'
             sh 'npx playwright install-deps --dry-run'
-            sh 'npx playwright install-deps chromium'
          }
       }
       stage('e2e-tests') 
       {
          steps {
-            sh 'npm run Google'
+            sh 'npm run Google --project=chromium'
          }
       }
    }
