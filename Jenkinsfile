@@ -14,6 +14,8 @@ pipeline {
       stage('e2e-tests') 
       {
          steps {
+            sh 'npm cache clean --force'
+            sh 'npm cache verify'
             sh 'npm ci'
             sh 'npm run Google'
          }
