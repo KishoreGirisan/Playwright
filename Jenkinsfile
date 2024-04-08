@@ -9,7 +9,13 @@
 ***/
 //4. restart jenkins service - brew services restart jenkins-lts
 pipeline {
-   agent { docker { image 'mcr.microsoft.com/playwright:v1.43.0-jammy' } }
+   agent { 
+      docker 
+         { 
+            image 'mcr.microsoft.com/playwright:v1.43.0-jammy' 
+            'run --rm -it docker pull mcr.microsoft.com/playwright:v1.43.0-jammy /bin/bash'
+         } 
+      }
    stages {
       stage('install') 
       {
