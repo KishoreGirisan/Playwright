@@ -23,6 +23,7 @@ pipeline {
             sh 'npm ci --cache="./cache/"'
             //sh 'npx playwright install-deps --dry-run'
             sh 'npx playwright install chrome --with-deps'
+            sh 'npx playwright install'
          }
       }
       stage('e2e-tests') 
