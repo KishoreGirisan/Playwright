@@ -14,8 +14,6 @@ pipeline {
       stage('e2e-tests') 
       {
          steps {
-            sh 'rm -rf node_modules/'
-            sh 'npm i'
             sh 'npm ci'
             sh 'npm run Google'
          }
