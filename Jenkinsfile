@@ -14,6 +14,7 @@ pipeline {
       stage('install') 
       {
          steps {
+            sh 'sudo npm cache clean --force'
             sh 'npm ci'
             sh 'npx playwright install --with-deps'
          }
