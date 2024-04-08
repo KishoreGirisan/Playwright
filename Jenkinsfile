@@ -22,7 +22,7 @@ pipeline {
       stage('e2e-tests') 
       {
          steps {
-            sh 'npm run Google --project=chromium'
+            sh 'npm run Google'
          }
       }
    }
