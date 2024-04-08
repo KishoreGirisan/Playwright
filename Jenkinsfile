@@ -13,7 +13,6 @@ pipeline {
    stages {
       stage('e2e-tests') {
          steps {
-            sh 'docker run -it --rm --ipc=host mcr.microsoft.com/playwright:v1.43.0-jammy /bin/bash'
             sh 'npm run Google'
          }
       }
