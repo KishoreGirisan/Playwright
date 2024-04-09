@@ -14,6 +14,7 @@ pipeline {
    stages {
       stage('e2e-tests') {
          steps {
+            sh 'sudo su'
             sh 'npm ci'
             sh 'npm run Google'
          }
