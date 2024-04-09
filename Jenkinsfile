@@ -14,7 +14,7 @@ pipeline {
    stages {
       stage('e2e-tests') {
          steps {
-            sh 'npm ci'
+            sh 'npm ci --cache=./cache/'
             sh 'npx playwright test google.spec.js'
          }
       }
