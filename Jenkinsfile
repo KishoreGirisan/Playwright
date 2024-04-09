@@ -14,7 +14,7 @@ pipeline {
    stages {
       stage('e2e-tests') {
          steps {
-            sh './test.sh'
+            sh 'chmod +x ./test.sh'
             sh 'npm ci --cache=./cache/'
             // sh 'npx playwright install --with-deps'
             // sh 'npx playwright install --with-deps'
