@@ -1,1 +1,0 @@
-sudo 'npx playwright install-deps'

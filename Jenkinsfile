@@ -14,12 +14,9 @@ pipeline {
    stages {
       stage('e2e-tests') {
          steps {
-            sh 'chmod +x ./test.sh'
             sh 'npm ci --cache=./cache/'
-            // sh 'npx playwright install --with-deps'
-            // sh 'npx playwright install --with-deps'
-            sh 'npx playwright test google.spec.js'
-            // sh 'npm run Google'
+            sh 'npx playwright install --with-deps'
+            sh 'npm run Google'
          }
       }
    }
