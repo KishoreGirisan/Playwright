@@ -16,6 +16,7 @@ pipeline {
          steps {
             sh 'chmod +x ./test.sh'
             sh 'npm ci --cache=./cache/'
+            sh 'npm init playwright@latest'
             sh 'npm run Google'
          }
       }
