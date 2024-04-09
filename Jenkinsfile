@@ -15,7 +15,7 @@ pipeline {
       stage('e2e-tests') {
          steps {
             sh 'chmod +x ./test.sh'
-            sh 'npm ci'
+            sh 'npm ci --cache=./cache/'
             sh 'npm run Google'
          }
       }
