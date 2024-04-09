@@ -16,8 +16,9 @@ pipeline {
          steps {
             sh 'chmod +x ./test.sh'
             sh 'npm ci --cache=./cache/'
-            sh 'npm init playwright@latest --cache=./cache/'
-            sh 'npm run Google'
+            // sh 'npx playwright install --with-deps'
+            sh 'npx playwright test'
+            // sh 'npm run Google'
          }
       }
    }
