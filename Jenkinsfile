@@ -8,27 +8,13 @@
     </dict>
 ***/
 //4. restart jenkins service - brew services restart jenkins-lts
+
 pipeline {
-   agent { 
-      docker 
-         { 
-            image 'mcr.microsoft.com/playwright:v1.43.0-jammy' 
-         } 
-      }
+   agent { docker { image 'mcr.microsoft.com/playwright:v1.43.0-jammy' } }
    stages {
-      stage('install') 
-      {
+      stage('e2e-tests') {
          steps {
-            sh 'npm cache clean --force'
-            sh 'npm ci --cache="./cache/"'
-            //sh 'npx playwright install-deps --dry-run'
-            // sh 'npm init playwright@latest'
-            // sh 'npx playwright install chrome --with-deps'
-         }
-      }
-      stage('e2e-tests') 
-      {
-         steps {
+            sh 'npm ci'
             sh 'npm run Google'
          }
       }
