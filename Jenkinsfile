@@ -22,7 +22,7 @@ pipeline {
             sh 'npm cache clean --force'
             sh 'npm ci --cache="./cache/"'
             //sh 'npx playwright install-deps --dry-run'
-            sh 'npm init playwright@latest'
+            // sh 'npm init playwright@latest'
             // sh 'npx playwright install chrome --with-deps'
          }
       }
