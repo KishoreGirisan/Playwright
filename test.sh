@@ -1,2 +1,1 @@
-
-sudo chown -R 501:20 "/.npm"
+sudo 'npx playwright install-deps'
