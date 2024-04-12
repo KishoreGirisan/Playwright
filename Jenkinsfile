@@ -28,10 +28,11 @@ pipeline
       always 
       {
          echo 'complete,sending email'
+         archiveArtifacts artifacts: '**/my-report/',
          emailext subject: 'Playwright',
          mimeType: 'text/html',
          body: './my-report/index.html',
-         to: "teddy86working@gmail.com"
+         to: 'teddy86working@gmail.com'
       }
    }
 }
