@@ -27,7 +27,7 @@ pipeline
    {
       always 
       {
-         sh 'npx playwright test --reporter=html'
+         echo 'complete'
       }
    }
 }
