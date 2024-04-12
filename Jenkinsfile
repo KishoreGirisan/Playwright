@@ -28,7 +28,7 @@ pipeline
       always 
       {
          echo 'complete,sending email'
-         archiveArtifacts artifacts: '**/my-report/',
+         archiveArtifacts artifacts: '**/my-report/'
          emailext subject: 'Playwright',
          mimeType: 'text/html',
          body: './my-report/index.html',
