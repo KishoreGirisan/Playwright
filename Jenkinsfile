@@ -20,4 +20,11 @@ pipeline {
          }
       }
    }
+   post
+   {
+      script
+      {
+         sh 'npx playwright show-report my-report'
+      }
+   }
 }
