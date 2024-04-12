@@ -31,7 +31,7 @@ pipeline
          archiveArtifacts artifacts: '**/my-report/'
          emailext subject: 'Playwright',
          mimeType: 'text/html',
-         body: "${BUILD_URL}/index.html",
+         body: "${BUILD_URL}index.html",
          to: 'teddy86working@gmail.com'
       }
    }
