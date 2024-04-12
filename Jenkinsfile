@@ -27,7 +27,11 @@ pipeline
    {
       always 
       {
-         echo 'complete'
+         echo 'complete,sending email'
+         emailext subject: 'Playwright',
+         mimeType: 'text/html',
+         body: './my-report/index.html'
+         to: "teddy86working@gmail.com"
       }
    }
 }
