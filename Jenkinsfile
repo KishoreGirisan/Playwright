@@ -9,10 +9,13 @@
 ***/
 //4. restart jenkins service - brew services restart jenkins-lts
 
-pipeline {
+pipeline 
+{
    agent { docker { image 'mcr.microsoft.com/playwright:v1.43.0-focal' } }
-   stages {
-      stage('e2e-tests') {
+   stages 
+   {
+      stage('e2e-tests') 
+      {
          steps {
             sh 'npm ci --cache=./cache/'
             // sh 'npx playwright test google.spec.js'
@@ -22,7 +25,7 @@ pipeline {
    }
    post
    {
-      script
+      always 
       {
          sh 'npx playwright show-report my-report'
       }
