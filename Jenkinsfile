@@ -30,7 +30,7 @@ pipeline
          echo 'complete,sending email'
          emailext subject: 'Playwright',
          mimeType: 'text/html',
-         body: './my-report/index.html'
+         body: './my-report/index.html',
          to: "teddy86working@gmail.com"
       }
    }
