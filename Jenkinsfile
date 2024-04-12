@@ -27,7 +27,7 @@ pipeline
    {
       always 
       {
-         sh 'npx playwright show-report my-report'
+         sh 'npx playwright test --reporter=html'
       }
    }
 }
