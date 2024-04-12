@@ -28,7 +28,6 @@ pipeline
       always 
       {
          echo 'complete'
-         sh 'npx playwright show-report'
       }
    }
 }
