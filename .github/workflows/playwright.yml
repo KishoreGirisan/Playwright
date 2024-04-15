@@ -21,6 +21,9 @@ jobs:
       run: npx playwright install
     - name: Run Playwright tests
       run: npm run Web
+      env:
+      User_Name: ${{secrets.User_Name}}
+      PassWD: ${{secrets.PassWD}}
     - uses: actions/upload-artifact@v3
       if: always()
       with:
