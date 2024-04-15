@@ -1,6 +1,9 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
 import { testPlanFilter } from "allure-playwright/dist/testplan";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 /**
  * Read environment variables from file.

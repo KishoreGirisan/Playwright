@@ -8,8 +8,8 @@ test('@Web UI Automation', async({page})=>{
 
     console.log(await page.title())
 
-    await page.locator("#username").fill("rahulshettyacademy")
-    await page.locator("#password").fill("learning")
+    await page.locator("#username").fill(process.env.User_Name)
+    await page.locator("#password").fill(process.env.PassWD)
 
     //click on radio
     await page.locator('input[value="user"]').click()
