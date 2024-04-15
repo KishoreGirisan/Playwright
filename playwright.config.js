@@ -3,6 +3,7 @@ const { defineConfig, devices } = require('@playwright/test');
 import { testPlanFilter } from "allure-playwright/dist/testplan";
 import dotenv from 'dotenv';
 
+//loads env file
 dotenv.config();
 
 /**
